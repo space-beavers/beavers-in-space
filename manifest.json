@@ -1,0 +1,7 @@
+{
+  "name": "space-beavers",
+  "short_name": "space-beavers",
+  "description": "Homepage for the Space Beavers",
+  "start_url": "/",
+  "display": "standalone"
+}

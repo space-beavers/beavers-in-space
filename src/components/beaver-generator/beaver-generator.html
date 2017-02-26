@@ -1,0 +1,55 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<!--
+`beaver-generator`
+This makes all the beavers
+
+@demo demo/index.html 
+-->
+
+<dom-module id="beaver-generator">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <template is="dom-repeat" items="[[beaverObject.beaverArray]]">
+    <h2>{{item.value}}</h2>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'beaver-generator',
+
+      properties: {
+        beavers: {
+          type: String,
+          value: "nothin"
+        },
+        beaverObject: {
+          type: Object,
+          value: {beaverArray: []}
+        }
+      },
+      
+      observers: [
+        "beaversChanged(beavers)"
+      ],
+      
+      beaversChanged: function(newVal){
+        var newNumber = Number(newVal);
+        var beaverArrays = [];
+        for(var i = 0; i < newNumber; i++){
+          console.log(this.beaverObject);
+          beaverArrays = beaverArrays.push({value: "BEAVER!!!!"});
+        }
+        this.beaverObject.beaverArray = beaverArrays;
+        //this.push('beaverObject', {be[{value: "BEAVER!!!!"},{value: "BEAVER!!!!"}]);
+      }
+      
+    });
+  </script>
+</dom-module>

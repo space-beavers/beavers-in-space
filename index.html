@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>space-beavers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="/src/space-app/space-app.html">
+  </head>
+  <body>
+    <space-app></space-app>
+      <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCYiot0zoa8L1iiz9KL3xq-RYHW5BiieCE",
+    authDomain: "beavers-in-space.firebaseapp.com",
+    databaseURL: "https://beavers-in-space.firebaseio.com",
+    storageBucket: "beavers-in-space.appspot.com",
+    messagingSenderId: "440276984499"
+  };
+  firebase.initializeApp(config);
+</script>
+  </body>
+</html>

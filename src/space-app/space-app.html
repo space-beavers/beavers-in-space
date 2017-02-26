@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../src/components/beaver-generator/beaver-generator.html">
+
+<dom-module id="space-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <beaver-generator beavers="[[domainValue]]"></beaver-generator> 
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'space-app',
+
+      properties: {
+        domainValue: {
+          type: String
+        }
+      },
+      attached: function(){
+          var host  = location.host; // "33.beavers.space"
+          // console.log(host);
+          //this.domainValue = host.replace(".beavers.space", ""); // "33"
+          this.domainValue = "64";
+          
+        }
+
+    });
+  </script>
+</dom-module>
